@@ -2,7 +2,7 @@ interface PhysicalProperties {
     height: number;
     weight: number;
     fitsInSlot: string;
-    driveType: string;
+    powerSource: string;
     equipment: Array<string>;
 }
 
@@ -12,13 +12,14 @@ export class Droid {
     physicalProperties: PhysicalProperties;
 
     constructor() {
+        console.log("constructor hit");
         this.seriesName = "R2 Series Astromech";
         this.producer = "Industrial Automaton";
         this.physicalProperties = {
             height: 1.09,
             weight: 32,
             fitsInSlot: "Starship",
-            driveType: "Three Wheel",
+            powerSource: "?",
             equipment: ["Buzz saw",
                 "Electric pike",
                 "Fusion welder",
@@ -30,9 +31,22 @@ export class Droid {
                 "Retractable third leg"]
         };
     }
-    
 
-    public editable(): boolean {
-        return false;
+    public canEdit(): boolean {
+        console.log("CanEdit hit");
+        return true;
     }
+
+    public changeEditable(): void {
+        this._editable = !this._editable;
+        console.log("editable changed to: " + this._editable);
+    }
+
+    public _editable = false;
+    get editable(): boolean {
+        console.log("editable hit");
+        return this._editable;
+    }
+
+
 }
