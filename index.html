@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Aurelia</title>
     <link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="scripts/kurve/kurve.min-0.3.7.js"></script>
-  </head>
+    <script>
+//         var identity = new Kurve.Identity(
+//         "233b8b15-868c-4125-b954-e64ae7c8e3a8",
+//         "https://localhost:5043/login.html",
+//         Kurve.OAuthVersion.v2);
+// 
+//         identity.login(function(error) {
+//             if (!error){
+//                 //login worked
+//                 alert("Log in worked");
+//                 var x=identity;
+//             } else {
+//                 var x = identity;
+//             }
+//         });
+    </script>
+</head>
 
-  <body aurelia-app="main">
+<body aurelia-app="main">
     <div class="splash">
-      <div class="message">Aurelia Navigation Skeleton</div>
-      <i class="fa fa-spinner fa-spin"></i>
+        <div class="message">Aurelia Navigation Skeleton</div>
+        <i class="fa fa-spinner fa-spin"></i>
     </div>
 
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
     <script>
-      System.import('aurelia-bootstrapper');
+        System.import('aurelia-bootstrapper');
     </script>
-  </body>
+
+</body>
+
 </html>
